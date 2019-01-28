@@ -93,8 +93,8 @@ ITEM_PIPELINES = {
 DB_CONN = {
     #  mysql+pymysql://<username>:<password>@<host>/<dbname>[?<options>]
     "MySQL": {
-        "db_conn": "mysql+pymysql://root:123456@127.0.0.1/enterpise_info",
-        "schema_name": "enterpise_info"
+        "db_conn": "mysql+pymysql://root:123456@127.0.0.1/enterpise",
+        "schema_name": "enterpise"
     }
 }
 LOG_LEVEL = 'DEBUG'

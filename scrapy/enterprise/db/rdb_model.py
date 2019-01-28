@@ -1,5 +1,4 @@
-#!/usr/share/app/anaconda3/bin/python3
-# encoding: utf-8  
+# encoding: utf-8
 
 """ 
 @version: v1.0 

@@ -10,6 +10,7 @@ scrapy = "*"
 scrapy-redis = "*"
 user-agent = "*"
 sqlalchemy = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.7"
