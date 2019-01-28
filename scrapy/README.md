@@ -24,5 +24,6 @@ business_scope | String(255) | 经营范围
 forward_label | String(255) | 前瞻标签
 exhibition_label | String(255) | 展会标签
 source_link_url | String(255) | 网页链接
+html_body | LONGTEXT | 网页内容
 insert_time | DateTime | 插入时间
 update_time | DateTime | 更新时间
