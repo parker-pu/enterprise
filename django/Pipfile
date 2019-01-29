@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "*"
 djangorestframework = "*"
+django-influxdb-metrics = "*"
 
 [requires]
 python_version = "3.7"

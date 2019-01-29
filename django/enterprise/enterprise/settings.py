@@ -36,9 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'influxdb_metrics',
     'rest_framework',
     'rest_framework.authtoken',
-    'my_token',
+    'user_token',
 ]
 
 MIDDLEWARE = [
@@ -96,6 +97,13 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# InfluxDB
+INFLUXDB_HOST = '127.0.0.1'
+INFLUXDB_PORT = '8086'
+INFLUXDB_USER = 'root'
+INFLUXDB_PASSWORD = 'root'
+INFLUXDB_DATABASE = 'enterprise'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

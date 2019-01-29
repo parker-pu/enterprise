@@ -10,7 +10,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.response import Response
 from custom.permission import CustomPermission
-from my_token.serializers import UserSerializer
+from user_token.serializers import UserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
