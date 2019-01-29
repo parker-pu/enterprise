@@ -22,7 +22,7 @@
 import api from '../../api/login'
 
 export default {
-  data () {
+  data() {
     // 自定义验证规则
     let validatePass1 = (rule, value, callback) => {
       // 6-16位, 数字, 字母, 字符至少包含两种, 同时不能包含中文和空格
@@ -49,29 +49,29 @@ export default {
       },
       rules: {
         username: [
-          {required: true, message: '用户名不能少', trigger: 'blur'},
-          {min: 6, max: 16, message: '用户名在6到16位之间', trigger: 'blur'}
+          { required: true, message: '用户名不能少', trigger: 'blur' },
+          { min: 6, max: 16, message: '用户名在6到16位之间', trigger: 'blur' }
         ],
         password: [
-          {required: true, message: '请输入密码', trigger: 'blur'},
-          {validator: validatePass1, trigger: 'blur'}
+          { required: true, message: '请输入密码', trigger: 'blur' },
+          { validator: validatePass1, trigger: 'blur' }
         ],
         checkPassword: [
-          {required: true, message: '请再次输入密码', trigger: 'blur'},
-          {validator: validatePass2, trigger: 'blur'}
+          { required: true, message: '请再次输入密码', trigger: 'blur' },
+          { validator: validatePass2, trigger: 'blur' }
         ]
       }
     }
   },
   methods: {
-    resetForm (formName) {
+    resetForm(formName) {
       this.$refs[formName].resetFields()
     },
-    submitForm (formName) {
+    submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) { // 验证通过
           api.userRegister(this.regForm)
-            .then(({data}) => {
+            .then(({ data }) => {
               if (data.code === 1) {
                 this.$message({
                   type: 'success',

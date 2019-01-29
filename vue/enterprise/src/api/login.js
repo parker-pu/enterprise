@@ -1,16 +1,16 @@
-import instance from '../axios'
+import instance from "../utils/axios";
 
 export default {
   // 用户注册
-  userRegister (data) {
-    return instance.post('/api-token-auth/', data)
+  userRegister(data) {
+    return instance.post("/api-token-auth/", data);
   },
   // 用户登录
-  userLogin (data) {
-    return instance.post('/api-token-auth/', data)
+  userLogin(data) {
+    return instance.post("/api-token-auth/", data);
   },
   // 根据 token 获取 User 的信息
-  tokenUserInfo () {
-    return instance.post('/api-token-auth/')
+  tokenUserInfo() {
+    return instance.post("/api-token-auth/");
   }
-}
+};

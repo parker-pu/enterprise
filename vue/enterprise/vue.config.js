@@ -52,14 +52,14 @@ module.exports = {
         target: "http://0.0.0.0:8000", // 请求这个地址
         changeOrigin: true, // 是否跨域
         pathRewrite: {
-          "^/api/": "/api/" // 地址重写，将 /ajax替换成  ''
+          "^/api/": "/api/" // 发送到相应的接口
         }
       },
       "/api-token-auth/": {
         target: "http://0.0.0.0:8000", // 请求这个地址
         changeOrigin: true, // 是否跨域
         pathRewrite: {
-          "^/api-token-auth/": "/api-token-auth/" // 地址重写，将 /ajax替换成  ''
+          "^/api-token-auth/": "/api-token-auth/" // 发送到相应的接口
         }
       }
     }

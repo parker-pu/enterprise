@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from scrapyd_manage.views import ScrapydHostViewSet
+from user_token.views import AuthTokenView
 
+# 自定义路由
+router_v1 = routers.DefaultRouter()
+router_v1.register(r'scrapyd-host', ScrapydHostViewSet)
+
+# 规则匹配的路由
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-token-auth/', AuthTokenView.as_view()),  # token 认证
+    path('api/v1/', include(router_v1.urls)),  # 相应的接口
 ]

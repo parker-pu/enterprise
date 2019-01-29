@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'user_token',
+    'scrapyd_manage',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,7 @@ INFLUXDB_PORT = '8086'
 INFLUXDB_USER = 'root'
 INFLUXDB_PASSWORD = 'root'
 INFLUXDB_DATABASE = 'enterprise'
+INFLUXDB_TAGS_HOST = 'enterprise'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
