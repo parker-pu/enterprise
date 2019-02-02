@@ -20,8 +20,6 @@ export default new Vuex.Store({
         return localStorage.getItem("tokenExpires");
       }
     },
-    // 用户的基础信息
-    userInfo: {},
     /*域名*/
     domainName: "http://127.0.0.1:8000"
   },
@@ -43,10 +41,6 @@ export default new Vuex.Store({
     // 清除用户保存在本地的信息
     clearUser() {
       localStorage.clear();
-    },
-    // 设置用户信息
-    setUserInfo(state, { setUserInfo }) {
-      state.userInfo = setUserInfo;
     }
   },
   actions: {}

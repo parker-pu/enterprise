@@ -1,10 +1,14 @@
 <template>
   <div>
     <el-container>
-      <el-header>
-        <Header></Header>
-      </el-header>
+      <el-aside :width="leftSize" class="aside">
+        <Left v-on:listenToChildEvent="updateLeft"></Left>
+      </el-aside>
       <el-container>
+        <!-- 面包屑 -->
+        <el-header>
+          <Breadcrumb></Breadcrumb>
+        </el-header>
         <el-main>
           <router-view />
         </el-main>
@@ -14,13 +18,37 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Header from "../components/Header";
+import Left from "../components/Left";
+import Breadcrumb from "../components/Breadcrumb";
 
 export default {
-  name: "home",
+  name: "Home",
   components: {
-    Header
+    Left,
+    Breadcrumb
+  },
+  data() {
+    return {
+      imgUrl: require("../assets/logo.png"),
+      leftSize: "65px"
+    };
+  },
+  methods: {
+    updateLeft(isCollapse) {
+      if (isCollapse === true) {
+        this.leftSize = "65px";
+      } else {
+        this.leftSize = "151px";
+      }
+    }
   }
 };
 </script>
+
+<style scoped>
+.el-header {
+  background-color: #ffffff;
+  color: #333;
+  line-height: 60px;
+}
+</style>

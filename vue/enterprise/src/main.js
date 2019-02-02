@@ -12,6 +12,8 @@ import {
   FormItem,
   Menu,
   MenuItem,
+  Submenu,
+  MenuItemGroup,
   Row,
   Col,
   Dropdown,
@@ -24,6 +26,7 @@ import {
   Tabs,
   TabPane,
   Radio,
+  RadioButton,
   RadioGroup,
   Loading,
   Steps,
@@ -35,7 +38,10 @@ import {
   Step,
   MessageBox,
   Notification,
-  Message
+  Aside,
+  Message,
+  Breadcrumb,
+  BreadcrumbItem
 } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
@@ -44,6 +50,10 @@ Vue.use(VueAxios, Axios);
 Vue.use(Button);
 Vue.use(Option);
 Vue.use(Select);
+Vue.use(Submenu);
+Vue.use(Menu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Dropdown);
@@ -51,6 +61,7 @@ Vue.use(DropdownMenu);
 Vue.use(DropdownItem);
 Vue.use(Dialog);
 Vue.use(Form);
+Vue.use(Aside);
 Vue.use(FormItem);
 Vue.use(Menu);
 Vue.use(MenuItem);
@@ -60,6 +71,7 @@ Vue.use(Input);
 Vue.use(Tabs);
 Vue.use(TabPane);
 Vue.use(Radio);
+Vue.use(RadioButton);
 Vue.use(RadioGroup);
 Vue.use(Steps);
 Vue.use(DatePicker);
@@ -68,6 +80,8 @@ Vue.use(Header);
 Vue.use(Main);
 Vue.use(Alert);
 Vue.use(Step);
+Vue.use(Breadcrumb);
+Vue.use(BreadcrumbItem);
 
 Vue.prototype.$loading = Loading.service; // 载入的时候
 Vue.prototype.$confirm = MessageBox.confirm; // 提示删除
